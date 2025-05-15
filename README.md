@@ -6,18 +6,12 @@
 
 ## Features
 
-- Modular architecture with separate classes for each subsystem:
-  - Battery management
-  - Drive mode control
-  - Safety management
-  - Speed calculation
-  - Data handling and display
+- Modular architecture with separate classes
 - Observer pattern for efficient UI updates
 - Multithreading for concurrent data processing and UI rendering
 - Mutex locking to ensure thread safety when accessing shared resources
 - Reads vehicle data from CSV files
 - Uses the `ncurses` library for terminal-based dashboard display
-- Configurable vehicle parameters
 
 ## Techniques Used
 
@@ -40,41 +34,41 @@
 
 ## Directory Structure
 
-```
-.
-├── CMakeLists.txt
-├── include/
-│   ├── BatteryManager.h
-│   ├── DashboardController.h
-│   ├── DataHandler.h
-│   ├── Display.h
-│   ├── DriveMode.h
-│   ├── SafetyManager.h
-│   ├── SpeedCalculator.h
-│   └── VehicleConfig.h
-├── src/
-│   ├── BatteryManager.cpp
-│   ├── DashboardController.cpp
-│   ├── DataHandle.cpp
-│   ├── Display.cpp
-│   ├── DriveMode.cpp
-│   ├── SafetyManager.cpp
-│   ├── SpeedCalculator.cpp
-│   ├── VehicleConfig.cpp
-│   └── main.cpp
-├── data/
-│   └── Database.csv
-└── build/
-```
+  ```
+  .
+  ├── CMakeLists.txt
+  ├── include/
+  │   ├── BatteryManager.h
+  │   ├── DashboardController.h
+  │   ├── DataHandler.h
+  │   ├── Display.h
+  │   ├── DriveMode.h
+  │   ├── SafetyManager.h
+  │   ├── SpeedCalculator.h
+  │   └── VehicleConfig.h
+  ├── src/
+  │   ├── BatteryManager.cpp
+  │   ├── DashboardController.cpp
+  │   ├── DataHandle.cpp
+  │   ├── Display.cpp
+  │   ├── DriveMode.cpp
+  │   ├── SafetyManager.cpp
+  │   ├── SpeedCalculator.cpp
+  │   ├── VehicleConfig.cpp
+  │   └── main.cpp
+  ├── data/
+  │   └── Database.csv
+  └── build/
+  ```
 
 ## Build Instructions
 
 1. **Install Dependencies**
    - Make sure you have CMake, a C++ compiler, and the `ncurses` library installed.
    - On Ubuntu:  
-     ```sh
-     sudo apt-get install build-essential cmake libncurses5-dev
-     ```
+   ```sh
+   sudo apt-get install build-essential cmake libncurses5-dev
+   ```
 
 2. **Build the Project**
    ```sh
