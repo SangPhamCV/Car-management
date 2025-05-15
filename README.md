@@ -1,4 +1,4 @@
-# car_dashboard_prj
+# CAR MANAGEMENT PROJECT
 
 ## Overview
 
