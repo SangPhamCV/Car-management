@@ -4,12 +4,6 @@
 
 **Car Management** is a C++ project that simulates a vehicle dashboard system. It is designed with modular components to manage and display various aspects of a car's status, such as speed, battery, drive mode, safety features, and more. The project uses modern C++ techniques and design patterns to ensure maintainability, scalability, and thread safety.
 
-## UML Diagram
-
-The following UML diagram illustrates class relationships of the project:
-
-![UML Diagram](Car-Management-UML.png)
-
 ## Features
 
 - Modular architecture with separate classes
@@ -21,22 +15,23 @@ The following UML diagram illustrates class relationships of the project:
 
 ## Techniques Used
 
-### Design Patterns
-
 - **Observer Pattern:**  
-  The dashboard uses the Observer pattern to notify the display and other components when vehicle data changes, ensuring decoupled and responsive updates.
+  This project uses the Observer pattern to update the display and related components when vehicle data changes.
 
 - **Singleton Pattern:**  
-  Certain manager classes (such as configuration or data handlers) may use the Singleton pattern to provide a single point of access throughout the application.
+  Singletons like VehicleConfig and DataHandler centralize configuration and sensor data access for consistent use across the dashboard.
 
-### Multithreading
+- **Multithreading**
+  The project uses C++ std::thread to separate three concurrent processes: sensor acquisition, vehicle data processing, and UI rendering.
+  
+- **Mutex Locking**
+  Shared resources are protected using mutexes (`std::mutex` and `std::lock_guard`) to prevent race conditions and ensure data consistency between threads.
 
-- The project uses C++ threads (`std::thread`) to separate data acquisition/processing from the UI rendering loop, allowing for smooth and responsive dashboard updates.
+## UML Diagram
 
-### Mutex Locking
+The following UML diagram illustrates class relationships of the project:
 
-- **Thread Safety:**  
-  Shared resources (such as vehicle data structures) are protected using mutexes (`std::mutex` and `std::lock_guard`) to prevent race conditions and ensure data consistency between threads.
+![UML Diagram](Car-Management-UML.png)
 
 ## Directory Structure
 
