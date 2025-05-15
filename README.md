@@ -2,7 +2,13 @@
 
 ## Overview
 
-**car_dashboard_prj** is a C++ project that simulates a vehicle dashboard system. It is designed with modular components to manage and display various aspects of a car's status, such as speed, battery, drive mode, safety features, and more. The project uses modern C++ techniques and design patterns to ensure maintainability, scalability, and thread safety.
+**Car Management** is a C++ project that simulates a vehicle dashboard system. It is designed with modular components to manage and display various aspects of a car's status, such as speed, battery, drive mode, safety features, and more. The project uses modern C++ techniques and design patterns to ensure maintainability, scalability, and thread safety.
+
+## UML Diagram
+
+The following UML diagram illustrates class relationships of the project:
+
+![UML Diagram](Car-Management-UML.png)
 
 ## Features
 
